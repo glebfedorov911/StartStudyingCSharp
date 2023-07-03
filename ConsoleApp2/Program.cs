@@ -57,6 +57,11 @@ namespace ConsoleApp2
                     Console.WriteLine("Количество четных и нечетных чисел");
                     prog.Homework6();
                     break;
+                case ConsoleKey.D8:
+                    Console.WriteLine();
+                    Console.WriteLine("Треугольники");
+                    prog.Homework7();
+                    break;
                 default:
                     break;
             }
@@ -289,6 +294,62 @@ namespace ConsoleApp2
 
             Console.WriteLine($"Количество чисел в диапазоне от {copyRangeFromNumbers} до {rangeToNumbers} \nчетных: {countEven} \nнечетных: {countOdd}");
             Console.WriteLine($"Сумма чисел в диапазоне от {copyRangeFromNumbers} до {rangeToNumbers} \nчетных: {sumEven} \nнечетных: {sumOdd}");
+        }
+
+        public void Homework7()
+        {
+            Console.Write("Введите высоту: ");
+            int height = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= height; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for (int i = 1; i <= height; i++)
+            {
+                for (int j = height; j >= i; j--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = height - 1; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
+            for (int i = height; i > 0; i--)
+            {
+                for (int j = height; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
